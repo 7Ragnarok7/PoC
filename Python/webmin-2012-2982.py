@@ -3,7 +3,7 @@
 # A Python Exploit against CVE-2012-2982
 # Author: Anurag Mondal (7Ragnarok7)
 # Mail: 7Ragnarok7@pm.me
-# Github: https://github.com/7Ragnarok7
+# Github: https://github.com/7Ragnarok7/PoC/blob/main/Python/webmin-2012-2982.py
 
 # Description: file/show.cgi in Webmin 1.590 and earlier allows remote authenticated users to execute
 # arbitrary commands via an invalid character in a pathname, as demonstrated by a | (pipe) character.
