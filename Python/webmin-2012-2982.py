@@ -2,6 +2,17 @@
 
 # A Python Exploit against CVE-2012-2982
 # Author: Anurag Mondal (7Ragnarok7)
+# Mail: 7Ragnarok7@pm.me
+# Github: https://github.com/7Ragnarok7
+
+# Description: file/show.cgi in Webmin 1.590 and earlier allows remote authenticated users to execute
+# arbitrary commands via an invalid character in a pathname, as demonstrated by a | (pipe) character.
+# Reference: https://nvd.nist.gov/vuln/detail/CVE-2012-2982
+
+# Note: By default the payload is set to create a reverse shell from the victim but you can
+# replace it with any payload of your choice.
+# Disclaimer: I shall not be held responsible for whatsover you do with this tool.
+
 
 import string
 import requests
