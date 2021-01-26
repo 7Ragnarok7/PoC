@@ -9,14 +9,13 @@
 # arbitrary commands via an invalid character in a pathname, as demonstrated by a | (pipe) character.
 # Reference: https://nvd.nist.gov/vuln/detail/CVE-2012-2982
 
-# Note: By default the payload is set to create a reverse shell from the victim but you can
-# replace it with any payload of your choice.
+# Note: By default the payload is set to create a reverse shell from the victim computer
+# but you can replace it with any payload of your choice.
 # Disclaimer: I shall not be held responsible for whatsover you do with this tool.
 
 
-import string
-import requests
-import random
+
+import string, requests, random
 from sys import argv
 
 try: lhost, lport, target, user, passw = argv[1:]
